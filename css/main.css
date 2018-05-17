@@ -1,0 +1,75 @@
+/*RESET*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #29B6F6;
+  height: 8rem;
+  width: 100%;
+}
+
+main {
+  width: 100%;
+  display: inline-block;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+/*SECTIONS*/
+.sections {
+  background-color: #455A64;
+  box-sizing: border-box;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 40rem;
+  display: inline-block;
+  margin: 5rem;
+}
+
+/*TIPOGRAFIAS*/
+
+.font1 {
+  font-family: 'Quicksand', sans-serif;
+  color: white;
+}
+
+/*PROFILE*/
+section#profile {
+  box-sizing: border-box;
+  height: 20rem;
+}
+
+/*SECTION OF THE FORM*/
+section#section-of-the-form {
+  box-sizing: border-box;
+  position: absolute;
+  top: 0;
+  width: 60rem;
+  font-family: 'Quicksand', sans-serif;
+}
+
+textarea {
+  width: 56rem;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 12pt;
+  outline: none;
+  box-sizing: border-box;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+button {
+  background-color: #29B6F6;
+  border: none;
+  border-radius: .5rem;
+  padding: 1rem 2rem;
+  font-size: 12pt;
+  margin-top: 1rem;
+}
