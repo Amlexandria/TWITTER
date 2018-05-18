@@ -4,6 +4,21 @@ var valueOfTheTweet = document.getElementById("text-area").value;
 var textArea = document.getElementById("text-area");
 console.log(valueOfTheTweet.length);
 
+if (valueOfTheTweet == ""){
+  tweetButton.disabled = true;
+};
+
+textArea.addEventListener("click", function(){
+  tweetButton.disabled = false;
+  textArea.addEventListener("keypress",function(){
+    if (valueOfTheTweet.value == ""){
+      tweetButton.disabled = true;
+    };
+    if (valueOfTheTweet.value > 0 && valueOfTheTweet.value <= 140 ){
+      tweetButton.disabled = false;
+    };
+  })
+})
 
 var createATweet = function() {
     var valueOfTheTweet = document.getElementById("text-area").value;
