@@ -2,7 +2,15 @@ var tweetButton = document.getElementById("button-tweet");
 var main = document.getElementById("main");
 var valueOfTheTweet = document.getElementById("text-area").value;
 var textArea = document.getElementById("text-area");
-console.log(valueOfTheTweet.length);
+
+var validationTextArea = function(){
+  if (valueOfTheTweet == ""){
+    tweetButton.disabled = true;
+  }else if(valueOfTheTweet.length >0 && valueOfTheTweet.length <= 140 ){
+        tweetButton.disabled = false;
+    };
+};
+
 
 if (valueOfTheTweet == ""){
   tweetButton.disabled = true;
@@ -10,15 +18,40 @@ if (valueOfTheTweet == ""){
 
 textArea.addEventListener("click", function(){
   tweetButton.disabled = false;
+  if (valueOfTheTweet == ""){
+    tweetButton.disabled = true;
+  };
+
   textArea.addEventListener("keypress",function(){
-    if (valueOfTheTweet.value == ""){
+    if (valueOfTheTweet.length <= 140 ){
+          tweetButton.disabled = false;
+        }
+  });
+});
+
+
+  /*textArea.addEventListener("mouseout",function(){
+    if (valueOfTheTweet == ""){
       tweetButton.disabled = true;
+      console.log("se desabilita");
     };
-    if (valueOfTheTweet.value > 0 && valueOfTheTweet.value <= 140 ){
+    });
+
+    tweetButton.addEventListener("mouseover", function(){
       tweetButton.disabled = false;
-    };
-  })
-})
+    })
+
+    textArea.addEventListener("click", function(){
+      tweetButton.disabled = false;
+      console.log("con un click el boton se habilita");
+    });*/
+
+
+
+
+
+
+
 
 var createATweet = function() {
     var valueOfTheTweet = document.getElementById("text-area").value;
@@ -44,6 +77,7 @@ var createATweet = function() {
 
     var focus = document.getElementById("text-area");
     focus.focus();
+
   };
 
   //CREANDO EL TWEET QUE DESENCADENA EL EVENTO "TWEET BUTTON"
